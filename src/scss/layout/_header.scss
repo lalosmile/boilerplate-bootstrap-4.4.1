@@ -1,0 +1,121 @@
+.header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    transition: .3s ease-in-out all;
+
+    .container{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        .row{
+            width: 100%;
+
+            [class*="col-"]{
+                padding: 0;
+            }
+        }
+    
+    }
+
+    
+    &--navegacion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        #logo-brand{
+            position: absolute;
+            top: 1em;
+        }
+
+        .navbar-expand-lg{
+            width: 100%;
+        }
+        .navbar-collapse{
+            justify-content: flex-end;
+        }
+
+        .btn{
+            width: 40px;
+            height: 40px;
+            background: var(--secondaryColor);
+            // background: url("../img/iconHam.webp") no-repeat center / contain;
+            transition: .2s ease-in-out all;
+            position: absolute;
+            right: 0;
+            margin: 1em auto;
+
+            &.nav-on{
+                // background: url("../img/close.svg") no-repeat center / 25px;
+            }
+        }
+
+        #navbarNav{
+            // position: fixed;
+            // top: 70px;
+            // left:0;
+            // width: 100vw;
+            // height: 100vh;
+            // padding: 20px 15px;
+            // opacity: 1;
+            
+
+            ul{
+                max-width: 720px;
+                // padding:15px 0 0 15px;
+                // margin-right: auto;
+                // margin-left: auto;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: flex-end;
+
+                li{
+                    text-align: left;
+                    list-style: none;
+                    margin: 1em;
+                    // margin-bottom: 15px;
+                    cursor: pointer;
+                    color: var(--secondaryColor);
+                    font-family: var(--primariaBold);
+                    font-size: var(--h5);
+
+                    a{
+                        color: inherit;
+                        text-decoration: none;
+                    }
+
+                    &:hover:not(#li-img), &.activo{
+                        border-bottom: 2px solid  var(--primaryColor);
+                    }
+
+                    img{
+                        transition: .3s ease-in-out all;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &.activo{
+        
+//         background: rgba(0,0,0,1);
+// background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(119,2,0,1) 68%, rgba(175,3,0,0) 100%);
+// background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(68%, rgba(119,2,0,1)), color-stop(100%, rgba(175,3,0,0)));
+// background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(119,2,0,1) 68%, rgba(175,3,0,0) 100%);
+// background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(119,2,0,1) 68%, rgba(175,3,0,0) 100%);
+// background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(119,2,0,1) 68%, rgba(175,3,0,0) 100%);
+// background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(119,2,0,1) 68%, rgba(175,3,0,0) 100%);
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#af0300', GradientType=0 );
+
+        ul li img{
+            width: 100px;
+        }
+    }
+}

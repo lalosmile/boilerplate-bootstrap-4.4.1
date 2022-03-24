@@ -1,0 +1,36 @@
+.combo {
+    @include combo;
+}
+ 
+.checkboxes{
+    @include checkbox;
+}
+
+input[type=button], input[type=submit]{
+    @include boton-on;
+}
+
+.form__input{
+    @include input;
+}
+
+.form--upload{
+    @include upload;
+}
+
+.msjError{
+    width: auto;
+    flex: 0 0 100%;
+    font-size: var(--h6);
+    color: var(--primaryColor);
+    margin-bottom: 10px;
+}
+
+.botonera{
+    display: flex;
+    justify-content: space-evenly;
+
+    input[type=button]{
+        min-width: 400px;
+    }
+}

@@ -1,0 +1,31 @@
+
+:root {
+    // COLORS
+
+    --primaryColor: #000000;
+    --secondaryColor: #FFFFFF;
+    --brandColor: #CCCCCC;
+
+    // FONTS
+
+    --primariaBold:'Helvetica';
+    --secundariaRegular:'Helvetica';
+    --secundariaBold:'Helvetica';
+
+    --h1:calc(40px + 30 * ((100vw - 1280px) / 1920));
+    --h2:calc(32px + 30 * ((100vw - 1280px) / 1920));
+    --h3:calc(26px + 30 * ((100vw - 1280px) / 1920));
+    --h4:calc(22px + 30 * ((100vw - 1280px) / 1920));
+    --h5:calc(16px + 30 * ((100vw - 1280px) / 1920));
+    --h6:calc(12px + 30 * ((100vw - 1280px) / 1920));
+
+    @media (max-width:992px) {
+        --h1:calc(40px + 30 * ((100vw - 320px) / 1280));
+        --h2:calc(32px + 30 * ((100vw - 320px) / 1280));
+        --h3:calc(26px + 30 * ((100vw - 320px) / 1280));
+        --h4:calc(22px + 30 * ((100vw - 320px) / 1280));
+        --h5:calc(16px + 30 * ((100vw - 320px) / 1280));
+        --h6:calc(12px + 30 * ((100vw - 320px) / 1280));
+    }
+}
+

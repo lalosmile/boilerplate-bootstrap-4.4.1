@@ -1,0 +1,54 @@
+- titulo = "Site Title Home"
+- tituloCabecera = "Headline"
+- var subtituloCabecera = "Lorem ipsum dolor sit amet."
+
+doctype
+html(lang='es')
+
+    include includes/head.pug
+
+    body
+        include includes/header.pug
+        main.home
+            section.hero
+                include includes/cabecera.pug
+                //- .container-fluid
+                //-     .row
+                        
+
+            section.slider
+                .container
+                    .row 
+                        .col-12
+                            h2.titulos Title
+                            h3 Subtitle
+
+                        .col-12
+                            .swiper-container#slider
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        //- img.img-fluid(src='../img/img.png' alt='First slide')
+                                        h2 Title Slider 
+                                        p Paragraph lorem ipsum dolor sit amet.
+
+                                    .swiper-slide
+                                        //- img.img-fluid(src='../img/img.png' alt='Second slide')
+                                        h2 Title Slider 
+                                        p Paragraph lorem ipsum dolor sit amet.
+
+                                    .swiper-slide
+                                        //- img.img-fluid(src='../img/img.png' alt='First slide')
+                                        h2 Title Slider 
+                                        p Paragraph lorem ipsum dolor sit amet.
+
+                                .swiper-pagination.d-flex.justify-content-center.align-items-center
+
+                                .swiper-button-prev
+                                .swiper-button-next
+
+                            
+        include includes/footer.pug
+
+        include includes/modal.pug                 
+
+

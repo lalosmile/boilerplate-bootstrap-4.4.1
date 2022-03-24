@@ -1,0 +1,40 @@
+.faqs{
+    
+    &--wrap{
+        padding: 30px 0 50px;
+        [class*=col-]{
+            margin: auto;
+        }
+
+        &__faq{
+            background: var(--secondaryColor);
+            border: 2px solid var(--primaryColor);
+            // border-radius: 10px;
+            margin-bottom: 20px;
+            .acordeon{
+                h4{
+                    color: var(--primaryColor);
+                }
+                @include acordeon;
+            }
+            
+        }
+    }
+}
+
+/* Morph the shape when the button is hovered over */
+.active{
+    h4{
+        button span:first-child {
+            transform: rotate(90deg);
+            left: 50%;
+            right: 50%;
+        }
+          
+        // button span:last-child {
+        //     left: 50%;
+        //     right: 50%;
+        // }
+    }
+    
+}

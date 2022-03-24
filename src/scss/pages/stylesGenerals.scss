@@ -1,0 +1,23 @@
+
+
+/// TEXTOS
+
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.3;
+}
+
+h2.titulos{
+    @include titulos;
+    color: var(--secondaryColor);
+    text-align: center;
+}
+
+.tituloH1{
+    @include tituloH1;
+}
+
+.linkBoton{
+    width: max-content;
+    margin: auto;
+}
+

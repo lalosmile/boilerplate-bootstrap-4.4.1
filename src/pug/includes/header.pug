@@ -1,0 +1,30 @@
+header.header
+    .container
+        .row
+            
+            .col-12.header--navegacion
+                nav.navbar-expand-lg
+                    #logo-brand
+                        picture 
+                            source(srcset="../../img/logo.webp", type="image/webp")
+                            img(src="../../img/logo.png", alt="Home - Nav")
+
+                    .btn(data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                        
+                    div.collapse.navbar-collapse#navbarNav
+                        ul
+                            //- li#li-img
+                            //-     picture 
+                            //-         source(srcset="../../img/logo.webp", type="image/webp")
+                            //-         img(src="../../img/logo.png", alt="Home - Nav")
+                            li#li-s1 
+                                a(href="/section") Section 0
+                            li#li-s2 
+                                a(href="/section") Section 1
+                            li#li-s3 
+                                a(href="/section") Section 2
+
+                            
+
+                           
+                            

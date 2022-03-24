@@ -1,0 +1,28 @@
+
+.swiper-container{
+    text-align: center;
+    .swiper-button-next:after, .swiper-button-prev:after{
+        color: var(--primaryColor);
+    }
+
+    .swiper-pagination{
+        position: relative;
+        margin: 40px auto 0;
+        
+        .swiper-pagination-bullet{
+            border-radius: 50%;
+            width: 13px;
+            height: 13px;
+            background: none;
+            border: 2px solid var(--primaryColor);
+            margin: 0 10px;
+            transition: .3s ease-in-out all;
+
+            &-active{
+                // width: 14px;
+                // height: 14px;
+                background: var(--primaryColor);
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+- titulo = "Sections - Title"
+- tituloCabecera = "Headline"
+- var subtituloCabecera = "Lorem ipsum dolor sit amet."
+
+doctype
+html(lang='es')
+
+    include includes/head.pug
+
+    body
+        include includes/header.pug
+        main.sectionIn
+            section.hero
+                include includes/cabecera.pug
+                //- .container-fluid
+                //-     .row
+            
+            section
+                h1.tituloH1 Hola Mundo!
+
+            //- FAQs
+            .faqs
+                .container.faqs--wrap 
+                    .row 
+                        .col-9 
+                            .faqs--wrap__faq
+                                .acordeon(data-toggle='collapse' data-target='#collapse-0' aria-expanded='false' aria-controls='collapse-0')
+                                    h4 In quo pertineant non numquam eius modi tempora incidunt, ut aut quid sit?
+                                        button
+                                            span
+                                            span
+                                    .collapse#collapse-0
+                                        .card.card-body
+                                            p In quo pertineant non numquam eius modi tempora incidunt, ut aut quid sit?
+                                        
+                            .faqs--wrap__faq
+                                .acordeon(data-toggle='collapse' data-target='#collapse-1' aria-expanded='false' aria-controls='collapse-1')
+                                    h4 In quo pertineant non numquam eius modi tempora incidunt, ut aut quid sit?
+                                        button
+                                            span
+                                            span
+                                    .collapse#collapse-1
+                                        .card.card-body
+                                            p In quo pertineant non numquam eius modi tempora incidunt, ut aut quid sit?
+                                        
+                            .faqs--wrap__faq
+                                .acordeon(data-toggle='collapse' data-target='#collapse-2' aria-expanded='false' aria-controls='collapse-2')
+                                    h4 In quo pertineant non numquam eius modi tempora incidunt, ut aut quid sit?
+                                        button
+                                            span
+                                            span
+                                    .collapse#collapse-2
+                                        .card.card-body
+                                            p In quo pertineant non numquam eius modi tempora incidunt, ut aut quid sit?
+        
+        include includes/footer.pug

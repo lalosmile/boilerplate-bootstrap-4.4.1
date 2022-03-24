@@ -1,0 +1,42 @@
+.modal{
+
+    .modal-content{
+        // background:url(../../img/textura-blanco.webp) no-repeat center top / contain, var(--negro);
+        // border: 2px solid var(--secondaryColor);
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .modal-body{
+        padding: 30px 50px 60px;
+    }
+
+    .modal-header{
+        border:none;
+
+        button.close{
+            color: var(--secondaryColor);
+            text-shadow: none;
+            opacity: 1;
+        }
+    }
+    
+    h4{
+        color: var(--secondaryColor);
+        font-size: var(--h4);
+        font-family: var(--secundariaBold);
+        margin-bottom: 30px;
+    }
+
+    p{
+        color: var(--secondaryColor);
+        font-size: var(--h5);
+    }
+
+    .circulo{
+        position: absolute;
+        bottom: -120px;
+        left: 0;
+        max-width: 80px;
+    }
+}

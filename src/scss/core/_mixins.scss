@@ -1,0 +1,389 @@
+
+
+// FONTS
+
+
+@mixin titulos {
+    font-size:var(--h1);
+    font-family: var(--primariaBold);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+@mixin tituloH1 {
+    font-size:var(--h1);
+    font-family: var(--primariaBold);
+    letter-spacing: 5px;
+    text-transform: uppercase; 
+    display: flex;
+    align-items: center;
+    color: var(--primaryColor);
+    justify-content: center;
+
+    &::before, &::after{
+        content: "";
+        // width: 140px;
+        // height: 140px;
+        display: block;
+        // background: url(../../img/yellowray.webp) no-repeat center / contain;
+    }
+
+    &::after{
+        transform:rotateY(180deg);
+    }
+}
+
+// FORMS
+
+
+@mixin checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 15px;
+    flex-flow: wrap;
+
+    input{
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+            background-color: var(--secondaryColor);
+        }
+
+        &:checked ~ .checkmark:after {
+            display: block;
+        }
+    }
+
+    
+    .checkmark{
+        height: 25px;
+        width: 25px;
+        border-radius: 2px;
+        border:2px solid var(--primaryColor);
+        box-shadow:inset 0 0 5px 0 var(--primaryColor), 0px 0px 10px var(--primaryColor);
+        margin-right: 10px;
+        cursor: pointer;
+        position: relative;
+        
+
+        &:after{
+            left: 5px;
+            top: 5px;
+            bottom: 10px;
+            margin: auto;
+            width: 10px;
+            height: 18px;
+            border: solid ;
+            border-width: 0 4px 4px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+
+    .label{
+        color: var(--secondaryColor);
+        font-size: var(--h5);
+
+        a{
+            text-decoration: underline;
+        }
+    }
+
+    .msjError{
+        margin-left: 35px;
+    }
+}
+
+@mixin combo {
+    background: var(--secondaryColor);
+    border-radius: 60px;
+    border: 2px solid var(--primaryColor);
+    cursor: pointer;
+    height: 50px;
+    
+    select{
+        appearance: none;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        padding: 0 30px;
+        background: transparent;
+        cursor: pointer;
+        // background: url(../../img/flechaCombo.svg) no-repeat 95% center / 15px;
+        z-index: 1;
+        position: relative;
+    }
+    
+}
+
+@mixin boton-on {
+    appearance: none;
+    outline: none;
+    opacity: 1;
+    min-height: 60px;
+    min-width: 300px;
+    font-size: var(--h3);
+    margin: 20px auto;
+    background: transparent;
+    color: var(--secondaryColor);
+    box-shadow:inset 0 0 30px 0 var(--primaryColor), 0px 0px 25px var(--primaryColor);
+    border: 4px solid var(--primaryColor);
+    border-radius: 60px;
+    transition: .3s ease-in-out all;
+    
+    &.btnSecundario{
+        box-shadow:inset 0 0 30px 0 var(--secondaryColor), 0px 0px 25px var(--secondaryColor);
+        border: 4px solid var(--secondaryColor);
+
+        &:hover{
+            box-shadow:inset 0 0 30px 0 var(--primaryColor), 0px 0px 25px var(--primaryColor);
+            border: 4px solid var(--primaryColor);
+        }
+    }
+
+    &:disabled{
+        color: #ccc;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        box-shadow:inset 0 0 30px 0 var(--secondaryColor), 0px 0px 25px var(--secondaryColor);
+        border: 4px solid var(--secondaryColor);
+    }
+}
+
+@mixin input{
+    position: relative;
+    margin-bottom: 35px;
+
+    label{
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        font-size: var(--h5);
+        color: var(--primaryColor);
+        margin-bottom: 0;
+        z-index: 0;
+        transition: .3s ease-in-out all;
+    }
+
+    input[type=text]{
+        appearance: none;
+        outline: none;
+        opacity: 1;
+        min-height: 50px;
+        font-size: var(--h4);
+        background: var(--secondaryColor);
+        color: var(--primaryColor);
+        border-radius: 60px;
+        border: 2px solid var(--primaryColor);
+        padding: 0 30px;
+        width: 100%;
+        transition: .3s ease-in-out all;
+    }
+
+    &.on{
+        label{
+            top: -30px;
+            left: 0;
+            color: var(--secondaryColor);
+        }   
+    }
+    
+}
+
+@mixin upload {
+    
+    label{
+        font-size: var(--h4);
+        color: var(--secondaryColor);
+        display: block;
+    }
+
+    #img_ticket {
+        display: none;
+    }
+
+    #btnFileFalse {
+        cursor: pointer;
+        background: var(--secondaryColor);
+        color: var(--primaryColor);
+        font-size: var(--h5);
+        border-radius: 50px;
+        width: 200px;
+        padding: 5px 10px;
+        text-align: center;
+        position: relative;
+
+        span {
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            left:105%;
+            font-size: var(--h5);
+            color: var(--secondaryColor);
+        }
+    }
+
+    h6{
+        font-size: var(--h6);
+        color: var(--secondaryColor);
+    }
+
+    
+}
+
+// MISC
+
+@mixin gradientePrimary{
+    background: url(../../img/textura.png) no-repeat center top / contain, transparent linear-gradient(180deg, var(--primaryColor) 0%, var(--secondaryColor) 51%, var(--primaryColor) 100%) 0% 0%;
+
+    // @media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
+    //     background: url(../../img/textura.png) no-repeat center top / contain, transparent linear-gradient(180deg, var(--primaryColor) 0%, var(--rojo) 51%, var(--primaryColor) 100%) 0% 0%;
+    // }}
+}
+
+@mixin gradienteSecondary{
+    background: transparent linear-gradient(90deg, #000000 0%, var(--secondaryColor) 10%, var(--secondaryColor) 49%, var(--secondaryColor) 90%, #000000 100%) 0% 0% no-repeat padding-box;
+}
+
+
+// 
+@mixin acordeon {
+    padding: 15px 45px 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: .3s ease-in-out all;
+    position: relative;
+
+    h4{
+        font-family: var(--secundariaBold);
+        // color: var(--primaryColor);
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-transform: uppercase;
+        line-height: normal;
+
+        &:after{
+            content: "";
+            // background: url(../img/generals/down-arrow-black.svg) no-repeat center;
+            transition: .3s ease-in-out all;
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            right: 40px;
+        }
+
+        button {
+            // color: var(--primaryColor);
+            background: transparent;
+            width: 50px;
+            height: 50px;
+            border: 0;
+            font-size: 1.5em;
+            position: absolute;
+            right: 0px;
+            top: 0;
+        }
+          
+        button span {
+            position: absolute;
+            transition: 300ms;
+            background: var(--primaryColor);
+            border-radius: 2px;
+        }
+          
+        /* Create the "+" shape by positioning the spans absolutely */
+        button span:first-child {
+            top: 25%;
+            bottom: 25%;
+            width: 10%;
+            left: 45%;
+        }
+          
+        button span:last-child {
+            left: 25%;
+            right: 25%;
+            height: 10%;
+            top: 45%;
+        }
+          
+        /* Morph the shape when the button is hovered over */
+        
+        // button:hover span {
+        //     transform: rotate(90deg);
+        // }
+          
+        // button:hover span:last-child {
+        //     left: 50%;
+        //     right: 50%;
+        // }
+    }
+
+    
+
+    &[aria-expanded=true]{
+        // background: var(--secondaryColor);
+        // border: 2px solid var(--primaryColor);
+        padding: 30px 45px 30px 30px;
+
+        h4, p{
+            color: var(--primaryColor);
+
+            &:after{
+                transform: rotate(180deg);
+            } 
+        }
+    }
+
+    
+
+    .card-body{
+        padding: 10px 0 0;
+        border: none;
+        border-radius: 0;
+        background: none;
+
+        p{
+            margin: 10px 0 0;
+        }
+    }
+
+    @media (max-width:992px) {
+        padding: 15px 40px 15px 15px;
+
+        h4{
+            font-size: 1rem;
+
+            &:after{
+                right: 30px;
+            }
+        }
+
+        &[aria-expanded=true]{
+            padding: 20px 40px 20px 15px;
+        }
+    }
+
+    // @media not all and (min-resolution:.001dpcm){ @supports (-webkit-appearance:none) {
+    //     appearance: none;
+    // }}
+}

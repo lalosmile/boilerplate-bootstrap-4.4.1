@@ -1,0 +1,19 @@
+// **** \\ STYLES_CSS // **** // 
+
+* {
+    font-family: courier;
+  }
+  
+body {
+    // background: $primaryColor;
+    overflow-x: hidden !important;
+    position: relative;
+    // font-family: var(--secundariaRegular);
+    
+    
+    @import "header";
+    @import "footer";
+    @import "pages/stylesGenerals";
+    @import "pages/_home";
+    @import "pages/_faqs";
+}
