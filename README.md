@@ -35,7 +35,6 @@ After installing the latest version of Node.js, install with:
 
 $ npm install pug-cli -g
 
-Si se desconoce el lenguaje, quitar la tarea de gulp file, y maquetar de forma tradicional HTML5
 
 **gulp (build)**
 
